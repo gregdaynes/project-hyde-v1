@@ -8,4 +8,6 @@ COPY ./package.json /opt/package.json
 COPY ./yarn.lock /opt/yarn.lock
 RUN yarn install
 
+COPY .git /opt/.git
+
 CMD npm start
