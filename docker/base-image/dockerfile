@@ -5,6 +5,7 @@ MAINTAINER Gregory Daynes <gregdaynes@gmail.com>
 
 RUN apk upgrade --update \
  && apk add build-base \
+ && apk add git \
  && apk add zlib libxml2 libxml2-dev \
  && apk add ruby ruby-dev ruby-bundler ruby-json
 
