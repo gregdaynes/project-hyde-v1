@@ -18,11 +18,3 @@
   white-space: nowrap !important;
   width: 1px !important;
 }
-
-.hidden-visually {
-  @include hidden-visually();
-}
-
-.hidden {
-  display: none !important;
-}

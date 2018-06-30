@@ -5,43 +5,49 @@
 
 */
 
-// Fun colors names
-$fruit-salad: #60A24F;
-$gun-powder: #414456;
-$glacier: #6EACC2;
-$jumbo: #83848C;
-$surf-crest: #cce2c7;
-$french-grey: #c1c3c9;
-$botticelli: #d1e5ec;
-$martinique: #32364C;
+$purple: (
+  base: hsl(270, 50%, 40%),
+  hover: hsl(270, 50%, 60%)
+);
 
-// Greys
-$color-grey--darkest: #000;
-$color-grey--dark: $martinique;
-$color-grey: $jumbo;
-$color-grey--light: #F1F1F1;
-$color-grey--lightest: #fff;
+$greys: (
+    0: hsl(0, 0,   0),
+   10: hsl(0, 0,  10%),
+   20: hsl(0, 0,  20%),
+   30: hsl(0, 0,  30%),
+   40: hsl(0, 0,  40%),
+   50: hsl(0, 0,  50%),
+   60: hsl(0, 0,  60%),
+   70: hsl(0, 0,  70%),
+   80: hsl(0, 0,  80%),
+   90: hsl(0, 0,  90%),
+  100: hsl(0, 0, 100%),
+);
 
-// Prime Colors
-$color-green: $fruit-salad;
-$color-green--lighter: $surf-crest;
-$color-blue: $gun-powder;
-$color-blue--lighter: $french-grey;
-$color-light-blue: $glacier;
-$color-light-blue--lighter: $botticelli;
+$greys--alpha: (
+   20: hsla(0, 0, 10%, .2),
+   40: hsla(0, 0, 10%,  .4),
+   60: hsla(0, 0, 10%,  .6),
+   80: hsla(0, 0, 10%,  .8),
+  100: hsla(0, 0, 10%, 1.0),
+);
 
-$color-brand-one: $fruit-salad;
-$color-brand-one--light: $surf-crest;
-$color-brand-two: $gun-powder;
-$color-brand-two--light: $french-grey;
-$color-brand-three: $glacier;
-$color-brand-three--light: $botticelli;
+$color-grey--lightest: -color($greys, 100);
+$color-grey--lighter:  -color($greys,  80);
+$color-grey--light:    -color($greys,  70);
+$color-grey:           -color($greys,  50);
+$color-grey--dark:     -color($greys,  30);
+$color-grey--darker:   -color($greys,  20);
+$color-grey--darkest:  -color($greys,   0);
 
-$color-text: $color-grey--dark;
+$color-purple:        -color($purple);
+$color-purple--hover: -color($purple, hover);
+
+$color-text:        $color-grey--darkest;
 $color-text--light: $color-grey--lightest;
-$color-text--dark: $color-grey--dark;
+$color-text--dark:  $color-grey--dark;
 
-$color-background--dark: $color-grey--dark;
-$color-background--light: $color-grey--lightest;
+$color-box-shadow:   -color($greys--alpha, 20);
+$color-text-shadow:  -color($greys--alpha, 50);
+$color-grey-overlay: -color($greys--alpha, 70);
 
-$color-box-shadow: rgba(0, 0, 0, 0.5);
