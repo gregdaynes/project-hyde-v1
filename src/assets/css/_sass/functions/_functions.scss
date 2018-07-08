@@ -38,6 +38,22 @@
   @return $return-value;
 }
 
+@function -multiple($desired-value, $baseline: $global-baseline) {
+  $s: -strip-units($desired-value);
+  $b: -strip-units($baseline);
+  $m: $s / $b;
+  $M: 1;
+
+  @if ($m % 1 == 0) {
+    $M: $m + 1;
+  } @else {
+    $M: ceil($m);
+  }
+
+  // 16px font, 24px baseline, 24 / 16 = 1.5
+  @return ($M * $b / $s);
+}
+
 @function -color($color, $variant: base) {
   @return map-get($color, $variant);
 }
