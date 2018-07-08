@@ -8,22 +8,22 @@
 
 @mixin wrapper-sizing {
   width: 100%;
-  max-width: calc(100vw - (2 * #{$gutter}));
+  @include padding-horizontal($gutter--large);
 
   @include screen($bp-tablet) {
-    max-width: calc(#{$bp-tablet} - (2 * #{$gutter}));
+    max-width: $bp-tablet;
   }
 
   @include screen($bp-desktop) {
-    max-width: calc(#{$bp-desktop} - (2 * #{$gutter--large}));
+    max-width: $bp-desktop;
   }
 
   @include screen($bp-large) {
-    max-width: calc(#{$bp-large} - (2 * #{$gutter--large}));
+    max-width: $bp-large;
   }
 
   @include screen($bp-extra-large) {
-    max-width: calc(#{$bp-extra-large} - (2 * #{$gutter--xl}));
+    max-width: $bp-extra-large;
   }
 
   > *:last-child {
@@ -33,13 +33,4 @@
   > *:first-child {
     margin-top: 0 !important;
   }
-}
-
-@mixin wrapper {
-  @include margin-center;
-  @include wrapper-sizing;
-}
-
-.container {
-  @include wrapper;
 }
