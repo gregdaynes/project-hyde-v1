@@ -1,0 +1,77 @@
+#!/bin/bash
+
+if [ "$1" ]; then
+  if [ "$1" != 'prod' ]; then
+    echo "Did you mean 'prod'?"
+    exit;
+  fi
+fi
+
+# install dependencies
+echo ""
+echo "Installing Dependencies"
+echo "---"
+yarn install
+bundle install
+echo "---"
+
+# remove existing folders, or contents
+echo ""
+echo "Setting Up Project Directories"
+echo "---"
+if [ "$1" = 'prod' ]; then
+  rm -rf dist
+else
+  rm -rf dist/assets/js/*
+  rm -rf dist/assets/css/*
+fi
+
+# ensure folders for assets exist
+mkdir -p dist/assets/js
+mkdir -p dist/assets/css
+echo "---"
+
+echo ""
+echo 'Building CSS'
+./node_modules/.bin/node-sass src/assets/css/main.scss --output dist/assets/css/
+echo "---"
+
+echo ""
+echo "Building JS"
+echo "---"
+./node_modules/.bin/babel src/ --out-file dist/assets/js/app.js
+echo "---"
+
+if [ "$1" = 'prod' ]; then
+  echo ""
+  echo "Building Site"
+  echo "---"
+  bundle exec jekyll build \
+  --config 'src/_config.yml,src/_config-common.yml,src/_config-production.yml' \
+  --source src/ \
+  --destination dist/
+  echo '---'
+  exit
+fi
+
+echo ""
+echo "Running Development Server"
+echo "---"
+trap 'echo "Development Server Killed"; kill %1; kill %2; kill %3' SIGINT SIGKILL SIGQUIT
+
+bundle exec jekyll build \
+  --drafts \
+  --watch \
+  --config 'src/_config.yml,src/_config-common.yml,src/_config-development.yml' \
+  --source src/ \
+  --destination dist/ \
+& ./node_modules/.bin/babel src/ \
+   --watch \
+   --out-file dist/assets/js/app.js \
+   --source-maps \
+& ./node_modules/.bin/node-sass \
+  --watch \
+  --recursive src/assets/css/main.scss \
+  --source-map-embed true \
+  --output dist/assets/css/ \
+& ./node_modules/.bin/browser-sync dist -w  -f ./dist
