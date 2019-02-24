@@ -1,3 +1,5 @@
-<a href="tel:{{ include.item.value }}">
-  <span itemprop="telephone">{{ include.item.display }}</span>
+{% if include.phone %}
+<a href="tel:{{ include.phone.value }}">
+  <span itemprop="telephone">{{ include.phone.display }}</span>
 </a>
+{% endif %}
