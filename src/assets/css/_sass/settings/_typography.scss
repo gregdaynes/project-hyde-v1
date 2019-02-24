@@ -7,7 +7,7 @@
 
 $base-font-size: 16px;
 $global-font-size: -size($base-font-size);
-$global-line-height: -size($base-font-size * 1.5);
+$global-line-height: -size($base-font-size * 1.6);
 $global-font-smoothing: false !default;
 $global-type-legible: false !default;
 $global-measure: 65ch !default;
@@ -21,4 +21,3 @@ $fonts: (
   display: "#{$garamond-stack}",
   mono: "Hasklig, #{$monospace-stack}",
 );
-
