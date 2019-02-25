@@ -1,7 +1,5 @@
 .jekyll-metadata
-_dist
 node_modules
 vendor
 .DS_Store
 .sass-cache
-dist/
