@@ -21,6 +21,8 @@ fonts: true
 creator: "@example" # Name or twitter handle of the website creator
 email: "creator@exaple.com" # email address of website creator
 
+permalink: pretty
+
 # !- Social
 social:
   name: Example Site

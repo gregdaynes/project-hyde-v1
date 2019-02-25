@@ -18,6 +18,5 @@ collections:
       - {label: "Body", name: "body", widget: "markdown"}
       - label: "Permalink"
         name: "permalink"
-        widget: "select"
-        options:
-          - { label: "Pretty", value: "pretty" }
+        widget: "text"
+        required: false
