@@ -76,5 +76,8 @@ DEPENDENCIES
   jekyll-sitemap
   jekyll-titles-from-headings
 
+RUBY VERSION
+   ruby 2.5.1p57
+
 BUNDLED WITH
-   2.0.1
+   1.17.3
