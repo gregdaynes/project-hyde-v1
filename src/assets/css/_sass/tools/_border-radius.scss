@@ -15,7 +15,7 @@
 // Example: button { @include border-radius(top-left, bottom-right) }
 @mixin border-radius($positions...) {
   @if (length($positions) > 0) {
-    @each $position in $positions  {
+    @each $position in $positions {
       border-#{$position}-radius: $global-radius;
     }
   } @else {
@@ -34,7 +34,7 @@
 // Example: button { @include border-radius(10px, top-left, bottom-right) }
 @mixin border-radius-size($size, $positions...) {
   @if (length($positions) > 0) {
-    @each $position in $positions  {
+    @each $position in $positions {
       border-#{$position}-radius: -size($size);
     }
   } @else {

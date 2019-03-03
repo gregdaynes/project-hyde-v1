@@ -5,10 +5,11 @@
   Useful functions for generating values
 
 */
+/* stylelint-disable scss/at-function-pattern, scss/dollar-variable-pattern */
 
 // Remove unit suffix from a value
 @function -strip-units($number) {
-  @if type-of($number) == 'number' and not unitless($number) {
+  @if type-of($number) == "number" and not unitless($number) {
     @return $number / ($number * 0 + 1);
   }
 
@@ -28,10 +29,10 @@
   $return-value: $value * $baseline;
 
   @if (unitless($return-value)) {
-    $return-value: $return-value + 'px';
+    $return-value: $return-value + "px";
   }
 
-  @if (type-of($return-value) != 'number') {
+  @if (type-of($return-value) != "number") {
     $return-value: unquote($return-value);
   }
 
@@ -61,4 +62,4 @@
 @function -shadow($x: null, $y: null, $blur: null, $spread: null, $color: null) {
   @return unquote("#{$x} #{$y} #{$blur} #{$spread} #{$color}");
 }
-
+/* stylelint-enable */

@@ -9,13 +9,13 @@
 // Set breakpoint at $breakpoint size, wrapping content
 @mixin screen($breakpoint) {
   @media screen and (min-width: #{$breakpoint}) {
-    @content
+    @content;
   }
 }
 
 // set max-width breakpoing wrapping content
 @mixin max-screen($breakpoint) {
-  @media screen and (max-width: #{$breakpoint - .1}) {
+  @media screen and (max-width: #{$breakpoint - 0.1}) {
     @content;
   }
 }

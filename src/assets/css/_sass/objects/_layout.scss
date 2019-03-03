@@ -5,6 +5,7 @@
   A good place to define layout helpers like wrappers, or grids
 
 */
+/* stylelint-disable declaration-no-important */
 
 @mixin wrapper-sizing {
   width: 100%;
@@ -34,3 +35,4 @@
     margin-top: 0 !important;
   }
 }
+/* stylelint-enable */

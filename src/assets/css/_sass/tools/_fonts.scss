@@ -22,6 +22,6 @@
 
 @mixin font($type) {
   @if map-has-key($fonts, $type) {
-    font-family: #{map-get($fonts, $type)};
+    font-family: "#{map-get($fonts, $type)}";
   }
 }

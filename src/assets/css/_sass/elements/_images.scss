@@ -9,7 +9,6 @@
 // 3. Setting `vertical-align` removes the whitespace that appears under `img`
 //    elements when they are dropped into a page as-is. Safer alternative to
 //    using `display: block;`.
-
 img {
   max-width: 100%; // 1
   font-style: italic; // 2
@@ -17,9 +16,8 @@ img {
 }
 
 @if ($static-images == true) {
-   // If a `width` and/or `height` attribute has been explicitly defined, let’s
-   // not make the image fluid.
-
+  // If a `width` and/or `height` attribute has been explicitly defined, let’s
+  // not make the image fluid.
   img[width],
   img[height] {
     max-width: none;

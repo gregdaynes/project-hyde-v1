@@ -5,6 +5,7 @@
   Shared declarations for certain elements.
 
 */
+/* stylelint-disable selector-list-comma-newline-after, rule-empty-line-before */
 
 address,
 h1, h2, h3, h4, h5, h6,
@@ -18,7 +19,7 @@ fieldset {
 }
 
 // Consistent indentation for lists.
-
 dd, ol, ul {
   margin-left: $global-spacing-unit;
 }
+/* stylelint-enable */

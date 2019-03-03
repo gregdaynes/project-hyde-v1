@@ -1,11 +1,11 @@
 .jump-to-nav {
-  color: transparent;
   position: absolute;
   width: 0;
   overflow: hidden;
+  color: transparent;
 
   &:focus {
-    color: inherit;
     width: auto;
+    color: inherit;
   }
 }

@@ -4,14 +4,15 @@
   ---
 
 */
+/* stylelint-disable indentation, function-comma-space-after, number-no-trailing-zeros */
 
 $purple: (
-  base: hsl(270, 50%, 40%),
+  base:  hsl(270, 50%, 40%),
   hover: hsl(270, 50%, 60%)
 );
 
 $greys: (
-    0: hsl(0, 0,   0),
+    0: hsl(0, 0,    0),
    10: hsl(0, 0,  10%),
    20: hsl(0, 0,  20%),
    30: hsl(0, 0,  30%),
@@ -25,10 +26,10 @@ $greys: (
 );
 
 $greys--alpha: (
-   20: hsla(0, 0, 10%,  .2),
-   40: hsla(0, 0, 10%,  .4),
-   60: hsla(0, 0, 10%,  .6),
-   80: hsla(0, 0, 10%,  .8),
+   20: hsla(0, 0, 10%, 0.2),
+   40: hsla(0, 0, 10%, 0.4),
+   60: hsla(0, 0, 10%, 0.6),
+   80: hsla(0, 0, 10%, 0.8),
   100: hsla(0, 0, 10%, 1.0),
 );
 
@@ -51,3 +52,4 @@ $color-box-shadow:   -color($greys--alpha, 20);
 $color-text-shadow:  -color($greys--alpha, 50);
 $color-grey-overlay: -color($greys--alpha, 70);
 
+/* styleline-enable */

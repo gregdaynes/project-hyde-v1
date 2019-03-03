@@ -21,13 +21,13 @@
   $length: length($breakpoints);
   $i: 1;
   $true: false;
-  $filtered_args: ();
+  $filtered-args: ();
 
   @each $var in $args {
     @if ($var == true) {
       $true: true;
     } @else {
-      $filtered_args: append($filtered_args, $var);
+      $filtered-args: append($filtered-args, $var);
     }
   }
 
