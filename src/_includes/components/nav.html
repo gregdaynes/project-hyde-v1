@@ -1,14 +1,14 @@
 {% assign recurse = include.recurse %}
 {% capture link %}{{ include.link | default: false }}{% endcapture %}
 
-<div class="site-nav__items">
+<div>
   {% for item in include.items %}
-    <div class="site-nav__item">
+    <span>
       {% include components/nav-item.html item=item link=link %}
 
       {% if include.recurse == true %}
         {% include components/nav-subitems.html item=item %}
       {% endif %}
-    </div>
+    </span>
   {% endfor %}
 </div>

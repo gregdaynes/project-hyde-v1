@@ -1,23 +1,25 @@
 {% if include.item.subitems %}
 
-<div class="site-nav__sub-item">
-  {% for subitem in include.item.subitems %}
-    {% include components/nav-item.html item=subitem %}
+<div>
+  <span>
+    {% for subitem in include.item.subitems %}
+      {% include components/nav-item.html item=subitem %}
 
-    {% if subitem.list %}
-      <div class="site-nav__sub-items">
-        {% for list in subitem.list %}
-          <div class="site-nav__item">
-            {% include components/nav-item.html item=list %}
+      {% if subitem.list %}
+        <div>
+          {% for list in subitem.list %}
+            <span>
+              {% include components/nav-item.html item=list %}
 
-            {% include components/nav-subitems.html item=list %}
-          </div>
-        {% endfor %}
-      </div>
-    {% else %}
-      {% include components/nav-subitems.html item=subitem %}
-    {% endif %}
-  {% endfor %}
+              {% include components/nav-subitems.html item=list %}
+            </span>
+          {% endfor %}
+        </div>
+      {% else %}
+        {% include components/nav-subitems.html item=subitem %}
+      {% endif %}
+    {% endfor %}
+  </span>
 </div>
 
 {% endif %}
