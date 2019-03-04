@@ -13,3 +13,6 @@
 #
 - url: /
   text: Home
+
+- url: /styleguide
+  text: Styleguide
