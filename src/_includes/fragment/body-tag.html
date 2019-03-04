@@ -1,1 +1,1 @@
-<body class="{% if page %}page-{% if page.class %}{{ page.class }}{% elsif page.title %}{{ page.title | downcase | replace: " ", "-" }}{% endif %}{% endif %}">
+<body class="{% if page %}page {% if page.class %}page-{{ page.class }}{% elsif page.title %}{{ page.title | downcase | replace: " ", "-" }}{% endif %}{% endif %}">
