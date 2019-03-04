@@ -1,11 +1,26 @@
-- name: Roboto
-  weight:
-    - 300
-    - 400
-
-- name: Open+Sans
+- name: Libre+Franklin
   weight:
     - 300
     - 300i
-  fallback:
-    -
+    - 400
+    - 400i
+    - 800
+    - 800i
+
+- name: Libre+Baskerville
+  weight:
+    - 300
+    - 300i
+    - 400
+    - 400i
+    - 800
+    - 800i
+
+- name: Proza+Libre
+  weight:
+    - 300
+    - 300i
+    - 400
+    - 400i
+    - 800
+    - 800i
