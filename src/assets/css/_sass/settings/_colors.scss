@@ -44,12 +44,17 @@ $color-grey--darkest:  -color($greys,   0);
 $color-purple:        -color($purple);
 $color-purple--hover: -color($purple, hover);
 
-$color-text:        $color-grey--darkest;
-$color-text--light: $color-grey--lightest;
-$color-text--dark:  $color-grey--dark;
+$color-text:        -color($greys, 0);
+$color-text--light: -color($greys, 100);
+$color-text--dark:  -color($greys, 30);
 
 $color-box-shadow:   -color($greys--alpha, 20);
 $color-text-shadow:  -color($greys--alpha, 50);
 $color-grey-overlay: -color($greys--alpha, 70);
+
+$color-primary:   -color($purple);
+$color-secondary: -color($purple, hover);
+$color-base:      -color($greys, 80);
+$color-border:    -color($greys, 20);
 
 /* styleline-enable */

@@ -11,8 +11,8 @@
 html {
   min-height: 100vh; // 2
   overflow-y: scroll; // 1
-  font-size: $global-font-size;
-  line-height: $global-line-height;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
 }
 
 body {
