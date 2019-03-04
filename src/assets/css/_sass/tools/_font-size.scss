@@ -7,6 +7,15 @@
 
 */
 
+@function fs($size) {
+  $fs: map-get($font-sizes, $size);
+  @return $fs;
+}
+
+// ----------------------------------------------------------
+
+// Original font-size mixin has been deprecated in favour of simpler rem style font sizing
+
 // sets the element font size rounded to the nearest multiple of baseline grid
 //
 // $default !required default font size
@@ -18,6 +27,7 @@
 // example h1 { @include font-size(16, 32, 64) }
 //   ouputs an h1 element that is 16px by default, 32px on a tablet, and 64px on a desktop
 @mixin font-size($default, $args...) {
+  @warn 'font-size has been deprecated, use @function fs()';
   $length: length($breakpoints);
   $i: 1;
   $true: false;

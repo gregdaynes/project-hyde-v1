@@ -5,6 +5,5 @@
 */
 
 body {
-  @include font-body;
-  @include body;
+  font-size: fs(normal);
 }

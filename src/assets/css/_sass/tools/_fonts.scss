@@ -8,20 +8,23 @@
 
 */
 
+@function font($type) {
+  @return unquote(map-get($fonts, $type));
+}
+
 @mixin font-display {
-  @include font(display);
+  font-family: font(display);
 }
 
 @mixin font-body {
-  @include font(body);
+  font-family: font(body);
+}
+
+@mixin font-complimentary {
+  font-family: font(complimentary);
 }
 
 @mixin font-mono {
-  @include font(mono);
+  font-family: font(mono);
 }
 
-@mixin font($type) {
-  @if map-has-key($fonts, $type) {
-    font-family: "#{map-get($fonts, $type)}";
-  }
-}
