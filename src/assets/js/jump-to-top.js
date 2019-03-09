@@ -1,11 +1,9 @@
-function toggleFade(position) {
-  const el = $('.back-to-top-link');
-  position > 800 ? el.fadeIn() : el.fadeOut();
-}
+/* global window */
+window.addEventListener('scroll', () => {
+  const backToTopLink = document.querySelector('.jump-to-top-link');
+  const position = window.scrollY;
 
-function scrollHandler() {
-  toggleFade($(this).scrollTop());
-}
-
-$(document).ready(scrollHandler);
-$(document).scroll(scrollHandler);
+  position >= 800
+    ? backToTopLink.classList.add('visible')
+    : backToTopLink.classList.remove('visible');
+});
