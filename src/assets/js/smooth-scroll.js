@@ -1,25 +1,19 @@
-/* global $ window */
-// Select all links with hashes
-// /**/
-$('a[href*="#"]')
-  // Remove links that don't actually link to anything
-  .not('[href="#"]')
-  .not('[href="#0"]')
+/* global window */
+document.querySelectorAll('a[href*="#"]:not([href="#"]):not([href="#0"])').forEach((item) => {
+  item.addEventListener('click', (event) => {
+    const target = event.srcElement;
 
-  .click(function clickHandler(event) {
-    // On-page links
-    const isOnPage = window.location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '');
-    const isSameHost = window.location.hostname === this.hostname;
+    const isOnPage = window.location.pathname.replace(/^\//, '') === event.path.pop().location.pathname.replace(/^\//, '');
+    const isSameHost = window.location.hostname === target.hostname;
 
     if (isOnPage && isSameHost) {
-      // Figure out element to scroll to
-      let target = $(this.hash);
-      target = target.length ? target : $(`[name=${this.hash.slice(1)}]`);
-      // Does a scroll target exist?
-      if (target.length) {
-        // Only prevent default if animation is actually gonna happen
+      const jumpToValue = target.getAttribute('href');
+      const jumpToTarget = document.getElementById(jumpToValue.substring(1));
+
+      if (jumpToTarget) {
         event.preventDefault();
-        $('html, body').animate({ scrollTop: target.offset().top }, 500);
+        jumpToTarget.scrollIntoView({ behavior: 'smooth' });
       }
     }
   });
+});
