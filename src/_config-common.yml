@@ -10,10 +10,10 @@ tagline: "The exampliest site" # Website tagline
 license: "GNU GPL v3 http://www.gnu.org/licenses/gpl-3.0.en.html"
 copyright: "Example Site" # Will format out to "©{year} Example Site"
 webmaster: "info@example.com" # email address for master of website
-lang: "en_US" # base language for website
+lang: "en-US" # base language for website
 logo: "/assets/site-logo.png"
 keywords: "" # Keywords to describe website
-description: "" # Written description of website. Keep under 250 words if possible
+description: "Project Hyde" # Written description of website. Keep under 250 words if possible
 author: "" # Site Author
 
 fonts: true
