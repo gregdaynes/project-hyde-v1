@@ -33,7 +33,7 @@ echo "---"
 
 echo ""
 echo 'Building CSS'
-./node_modules/.bin/node-sass src/assets/css/main.scss --output dist/assets/css/
+./node_modules/.bin/node-sass src/assets/css/main.scss --output dist/assets/css/ --output-style compressed
 echo "---"
 
 echo ""
