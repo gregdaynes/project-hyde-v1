@@ -49,6 +49,7 @@
     ]
   },
   "devDependencies": {
+    "babel-preset-minify": "^0.5.0",
     "browser-sync": "^2.24.4",
     "stylelint": "^9.10.1",
     "stylelint-8-point-grid": "^0.2.1",
