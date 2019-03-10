@@ -11,6 +11,18 @@ $purple: (
   hover: hsl(270, 50%, 60%)
 );
 
+$tomato: (
+  base: hsl(9, 100%, 64%),
+);
+
+$lemon: (
+  base: hsl(54, 100%, 90%)
+);
+
+$skyblue: (
+  base: hsl(203, 92%, 75%)
+);
+
 $greys: (
     0: hsl(0, 0,    0),
    10: hsl(0, 0,  10%),
@@ -53,7 +65,9 @@ $color-text-shadow:  -color($greys--alpha, 50);
 $color-grey-overlay: -color($greys--alpha, 70);
 
 $color-primary:   -color($purple);
-$color-secondary: -color($purple, hover);
+$color-secondary: -color($skyblue);
+$color-tertiary:  -color($lemon);
+$color-accent:    -color($tomato);
 $color-base:      -color($greys, 80);
 $color-border:    -color($greys, 20);
 
