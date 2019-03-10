@@ -20,7 +20,9 @@
 @function -size($desired-value) {
   $baseline: $global-baseline;
   @if ($desired-value <= ($baseline + ($baseline / 2))) {
-    //@warn "#{$desired-value} is smaller than #{$baseline + ($baseline / 2)}, did you mean it?";
+    @if ($debug-size-warning) {
+      @warn "#{$desired-value} is smaller than #{$baseline + ($baseline / 2)}, did you mean it?";
+    }
     $baseline: $global-baseline / 4;
   }
 
