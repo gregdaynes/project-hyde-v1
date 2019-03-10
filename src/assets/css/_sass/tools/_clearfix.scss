@@ -1,12 +1,12 @@
-/*
+//
+//
+//  Clearfix
+//  ---
+//  Micro Clearfix http://www.cssmojo.com/the-very-latest-clearfix-reloaded/
+//
+//
+// stylelint-disable declaration-no-important
 
-  Clearfix
-  ---
-  Micro Clearfix http://www.cssmojo.com/the-very-latest-clearfix-reloaded/
-
-*/
-
-/* stylelint-disable declaration-no-important */
 @mixin clearfix() {
   &::after {
     content: "" !important;
@@ -14,4 +14,4 @@
     clear: both !important;
   }
 }
-/* stylelint-enable declaration-no-important */
+// stylelint-enable declaration-no-important

@@ -1,10 +1,10 @@
-/*
-
-  Core
-  ---
-  Setup important variables, feature flags for project
-
-*/
+//
+//
+//  Core
+//  ---
+//  Setup important variables, feature flags for project
+//
+//
 
 $global-baseline: 8px !default; // All spacing metrics based on this.
 $global-radius: 3px !default;
@@ -80,13 +80,13 @@ $fonts: (
 );
 
 
-/*
-
-  Sizing
-  ---
-  Useable spacing for elements
-
-*/
+//
+//
+//  Sizing
+//  ---
+//  Useable spacing for elements
+//
+//
 
 // Spacing values - created from the baseline
 $global-spacing-unit-micro:    -size($global-baseline / 8);

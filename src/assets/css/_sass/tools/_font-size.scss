@@ -1,11 +1,11 @@
-/*
-
-  Font-Size
-  ---
-  Helpers for defining font-sizes at certain breakpoints
-  forces alignment with the baseline grid
-
-*/
+//
+//
+//  Font-Size
+//  ---
+//  Helpers for defining font-sizes at certain breakpoints
+//  forces alignment with the baseline grid
+//
+//
 
 @function fs($size) {
   $fs: map-get($font-sizes, $size);

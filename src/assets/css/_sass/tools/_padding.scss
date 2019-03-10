@@ -1,11 +1,11 @@
-/*
-
-  Padding
-  ---
-  Helpers to define padding as multiples of the baseline grid
-  Needs to maintain similarity with default css properties
-
-*/
+//
+//
+//  Padding
+//  ---
+//  Helpers to define padding as multiples of the baseline grid
+//  Needs to maintain similarity with default css properties
+//
+//
 
 @mixin padding-left($size) {
   padding-left: -size($size);

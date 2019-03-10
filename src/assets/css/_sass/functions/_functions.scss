@@ -1,11 +1,11 @@
-/*
-
-  Functions
-  ---
-  Useful functions for generating values
-
-*/
-/* stylelint-disable scss/at-function-pattern, scss/dollar-variable-pattern */
+//
+//
+//  Functions
+//  ---
+//  Useful functions for generating values
+//
+//
+// stylelint-disable scss/at-function-pattern, scss/dollar-variable-pattern
 
 // Remove unit suffix from a value
 @function -strip-units($number) {
@@ -62,4 +62,4 @@
 @function -shadow($x: null, $y: null, $blur: null, $spread: null, $color: null) {
   @return unquote("#{$x} #{$y} #{$blur} #{$spread} #{$color}");
 }
-/* stylelint-enable */
+// stylelint-enable

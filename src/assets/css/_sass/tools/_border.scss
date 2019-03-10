@@ -1,10 +1,10 @@
-/*
-
-  Border
-  ---
-  Helper mixins for defining borders
-
-*/
+//
+//
+//  Border
+//  ---
+//  Helper mixins for defining borders
+//
+//
 
 @mixin border-solid($size, $color, $positions...) {
   @if (length($positions) > 0) {

@@ -1,11 +1,11 @@
-/*
-
-  Margin
-  ---
-  Helpers to define margins as multiples of the baseline grid
-  Needs to maintain similarity with default css properties
-
-*/
+//
+//
+//  Margin
+//  ---
+//  Helpers to define margins as multiples of the baseline grid
+//  Needs to maintain similarity with default css properties
+//
+//
 
 @mixin margin-left($size) {
   margin-left: -size($size);

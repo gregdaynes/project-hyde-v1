@@ -1,12 +1,12 @@
-/*
-
-  Fonts
-  ---
-  Finds and inserts the font family based on the type sent. Basic usage is simply:
-
-    @include font(body);
-
-*/
+//
+//
+//  Fonts
+//  ---
+//  Finds and inserts the font family based on the type sent. Basic usage is simply:
+//
+//    @include font(body);
+//
+//
 
 @function font($type) {
   @return unquote(map-get($fonts, $type));

@@ -1,10 +1,10 @@
-/*
-
-  Colors
-  ---
-
-*/
-/* stylelint-disable indentation, function-comma-space-after, number-no-trailing-zeros */
+//
+//
+//  Colors
+//  ---
+//
+//
+// stylelint-disable indentation, function-comma-space-after, number-no-trailing-zeros
 
 $purple: (
   base:  hsl(270, 50%, 40%),
@@ -57,4 +57,4 @@ $color-secondary: -color($purple, hover);
 $color-base:      -color($greys, 80);
 $color-border:    -color($greys, 20);
 
-/* styleline-enable */
+// styleline-enable
