@@ -1,0 +1,81 @@
+$moodboard-color-primary: #28252f;
+$moodboard-color-secondary: #c68f0c;
+$moodboard-color-tertiary: #ffffff;
+$moodboard-color-accent: #000000;
+$moodboard-background-color: #e9e3db;
+$moodboard-font-display: 'Proza Libre';
+$moodboard-font-complimentary: 'Libre Franklin';
+$moodboard-font-primary: 'Libre Baskerville';
+$moodboard-background: '';
+$moodboard-texture: 'https://i.pinimg.com/474x/c2/8a/97/c28a9737238c287cd9484e45646a5670--celiac-disease.jpg';
+$moodboard-sample-1: 'https://www.quickbase.com/blog/wp-content/uploads/2016/10/How-to-Manage-a-Jekyll-and-Hyde-Employee.jpg';
+$moodboard-sample-2: 'https://upload.wikimedia.org/wikipedia/en/c/c6/Jekyll_and_Hyde_TV_series_titlecard.jpg';
+$moodboard-sample-3: 'https://images-eu.ssl-images-amazon.com/images/I/51X4lOo82eL.jpg';
+$moodboard-sample-4: 'http://www.ncnews.co.nz/wp-content/uploads/2018/05/hur797jekyll-1.jpg';
+
+.moodboard__grid {
+  background-color: $moodboard-background-color;
+  background-image: url($moodboard-background);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-gap: $gutter--large;
+  @include padding($gutter--large);
+  @include wrapper-sizing;
+
+  > div:nth-child(5) {
+    grid-column: 1 / 4;
+  }
+
+  > div:nth-child(7),
+  > div:nth-child(10) {
+    grid-row: 3 / 5;
+    border: 1px solid red;
+  }
+
+  > div:nth-child(8) {
+    background-color: red;
+    grid-column: 2/4;
+    grid-row: 3;
+  }
+
+  > div:nth-child(9) {
+    grid-column: 2/4;
+    grid-row: 4;
+    border: 1px solid blue;
+  }
+
+  .moodboard__color {
+    &-1 { background-color: $moodboard-color-primary }
+    &-2 { background-color: $moodboard-color-secondary }
+    &-3 { background-color: $moodboard-color-tertiary }
+    &-4 { background-color: $moodboard-color-accent }
+  }
+
+  .moodboard__typography {
+    h1 { font-family: $moodboard-font-display; color: $moodboard-color-primary }
+    h3 { font-family: $moodboard-font-complimentary; color: $moodboard-color-secondary }
+    p { font-family: $moodboard-font-primary; color: $moodboard-color-accent }
+  }
+
+  .moodboard__texture,
+  .moodboard__sample {
+    background-size: cover;
+    background-position: center ;
+  }
+
+  .moodboard__texture {
+    background-image: url($moodboard-texture);
+  }
+
+  .moodboard__sample {
+    &:nth-child(7) { background-image: url($moodboard-sample-1) }
+    &:nth-child(8) { background-image: url($moodboard-sample-2) }
+    &:nth-child(9) { background-image: url($moodboard-sample-3) }
+    &:nth-child(10) { background-image: url($moodboard-sample-4) }
+  }
+}

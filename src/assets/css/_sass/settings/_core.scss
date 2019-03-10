@@ -74,9 +74,9 @@ $global-measure: 65ch !default;
 // eg: mono spaced stack would be
 //       "'Fira-Mono', Hasklig, #{$monospace-stack}"
 $fonts: (
-  'body': "Libre Baskerville, #{$garamond-stack}",
-  'complimentary': "Libre Franklin, #{$helvetica-stack}",
-  'display': "Proza Libre, #{$garamond-stack}",
+  'body': "Roboto, #{$helvetica-stack}",
+  'complimentary': "Roboto, #{$helvetica-stack}",
+  'display': "Cabin, #{$garamond-stack}",
   'mono': "#{$monospace-stack}",
 );
 

@@ -1,0 +1,10 @@
+.site-footer {
+  background-color: $color-grey--darkest;
+  @include padding($gutter--huge);
+  font-size: fs(small);
+  color: $color-text--muted;
+
+  a {
+    color: $color-text--muted;
+  }
+}

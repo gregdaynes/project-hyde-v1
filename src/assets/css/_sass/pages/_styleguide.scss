@@ -1,21 +1,33 @@
 .page-styleguide {
   .styleguide__table-of-contents {
-    @include border-solid(1px, $color-primary, bottom);
-    @include padding($gutter);
-    background-color: $color-grey--lightest;
+    border-bottom: 2px solid $color-border;
+    background-color: $color-base;
+    @include padding-vertical($gutter--large);
+    @include wrapper-sizing;
+    @include margin-center;
+    display: flex;
+    flex-wrap: wrap;
 
     @include screen($bp-desktop) {
       position: -webkit-sticky;
       position: sticky;
       top: 0px;
-      display: grid;
-      grid-gap: $gutter;
-      grid-template-columns: repeat(8, 1fr);
     }
 
     a {
-      @include font-complimentary;
+      flex-grow: 1;
+      color: $color-text--muted;
       text-decoration: none;
+      text-transform: uppercase;
+      font-size: fs(small);
+      font-weight: bold;
+      @include padding-right($gutter);
+      @include font-complimentary;
+      @include transition;
+
+      &:hover {
+        color: $color-primary--hover;
+      }
     }
   }
 
@@ -23,11 +35,12 @@
     @include margin-center;
     @include wrapper-sizing;
     @include flex-column-to-row($bp-desktop);
-    @include border-solid(2px, $color-grey--lighter, bottom);
     @include padding-vertical($gutter--xl);
+    border-bottom: 1px solid $color-border;
     display: flex;
 
     &__title {
+      font-size: fs(normal);
       flex-basis: 33%;
       flex-shrink: 0;
     }
@@ -41,7 +54,7 @@
   .styleguide-label {
     @include font-complimentary;
     font-size: fs(xx-small);
-    color: $color-grey--light;
+    color: $color-text--muted;
     text-transform: uppercase;
     @include margin-top($gutter);
   }
@@ -58,7 +71,6 @@
 
   .colors-in-use {
     &__content {
-      @include flex-column-to-row($bp-tablet);
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
@@ -102,12 +114,27 @@
   }
 
   .paragraphs__columns {
-    @include columns(4);
+    @include screen($bp-tablet) {
+      @include columns(2);
+    }
+
+    @include screen($bp-desktop) {
+      @include columns(3);
+    }
+
+    @include screen($bp-large) {
+      @include columns(4);
+    }
+  }
+
+  .styleguide-ligatures {
+    text-transform: lowercase;
   }
 
   .headings__content {
     @include flex-column;
     @include flex-column-to-row($bp-desktop);
+    justify-content: space-between;
 
     > div {
       @include flex-half($gutter);
@@ -123,13 +150,18 @@
   }
 
   .lists__content {
-    @include flex-column-to-row($bp-tablet);
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 
     > div {
-      @include flex-even(3, $gutter--xl);
+      @include screen($bp-tablet) {
+        @include flex-even(3, $gutter--xl);
+      }
     }
+  }
+
+  .button {
+    @include margin-vertical($gutter);
   }
 }

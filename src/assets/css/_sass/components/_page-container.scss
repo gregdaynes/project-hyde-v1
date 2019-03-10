@@ -1,0 +1,4 @@
+.page-container {
+  @include wrapper-sizing;
+  @include margin-center;
+}

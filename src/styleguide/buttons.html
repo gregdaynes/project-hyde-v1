@@ -1,14 +1,23 @@
 <div>
-  <p class="styleguide-label">System Button &amp; Link</p>
+  {% assign sizes = 'large, , small' | split: ', ' %}
+  {% assign states = ', hover, active, disabled' | split: ', ' %}
+  {% assign fills = ' , ghost, secondary' | split: ', ' %}
 
-  <div>
-    <button>System Button</button>
-    <a href="javascript:void(0)">Hyperlink</a>
-  </div>
+  {% for fill in fills %}
+    {% capture fill-name %}{{ fill | default: "solid" }}{% endcapture %}
+
+    {% for state in states %}
+      <p class="styleguide-label">{{ fill-name | capitalize }} {{ state | capitalize }}</p>
+      {% for size in sizes %}
+      <button class="button button--{{ size }} button--{{ state }} button--{{ fill }}" {{ state }}>Button</button>
+        <a class="button button--{{ size }} button--{{ state }} button--{{ fill }}" href="javascript:void(0)">Link</a>
+      {% endfor %}
+    {% endfor %}
+  {% endfor %}
 </div>
 
 <div>
-  <p class="styleguide-label">Large Button</p>
+  <p class="styleguide-label">Button &amp; Link</p>
 
   <div>
     <button>Button</button>
@@ -17,36 +26,10 @@
 </div>
 
 <div>
-  <p class="styleguide-label">Standard button</p>
+  <p class="styleguide-label">Link Style Button &amp; Link</p>
 
   <div>
-    <button>Button</button>
-    <a href="javascript:void(0)">Hyperlink</a>
-  </div>
-</div>
-<div>
-  <p class="styleguide-label">Mini button</p>
-
-  <div>
-    <button>Button</button>
-    <a href="javascript:void(0)">Hyperlink</a>
-  </div>
-</div>
-
-<div>
-  <p class="styleguide-label">Small button</p>
-
-  <div>
-    <button>Button</button>
-    <a href="javascript:void(0)">Hyperlink</a>
-  </div>
-</div>
-
-<div>
-  <p class="styleguide-label">Block button</p>
-
-  <div>
-    <button>Button</button>
+    <button class="button--link">Button</button>
     <a href="javascript:void(0)">Hyperlink</a>
   </div>
 </div>

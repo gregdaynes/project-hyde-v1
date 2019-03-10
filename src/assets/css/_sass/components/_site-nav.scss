@@ -1,0 +1,15 @@
+.site-nav {
+  a {
+    text-decoration: none;
+    color: $color-text--muted;
+    text-transform: uppercase;
+    font-size: fs(large);
+    font-weight: bold;
+    @include padding-horizontal($gutter--xl);
+    @include font-display;
+  }
+
+  span:nth-child(1) a {
+    padding-left: 0;
+  }
+}

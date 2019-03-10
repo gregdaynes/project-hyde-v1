@@ -1,0 +1,42 @@
+ul {
+  list-style: none;
+
+  li::before {
+    content: "\25AA";
+    padding-right: $gutter;
+    color: $color-secondary;
+    font-size: fs(x-small);
+  }
+
+  ul li::before {
+    content: "\25AB";
+  }
+}
+
+ol {
+  list-style: none;
+  counter-reset: ordered-list;
+
+  li::before {
+    content: counter(ordered-list)".";
+    color: $color-secondary;
+    counter-increment: ordered-list;
+    padding-right: $gutter;
+  }
+
+  ul li::before {
+    content: "\25CB";
+  }
+}
+
+dl {
+  dt {
+    text-transform: uppercase;
+    font-size: fs(small);
+    font-weight: bold;
+  }
+
+  dd {
+    color: $color-text--muted;
+  }
+}

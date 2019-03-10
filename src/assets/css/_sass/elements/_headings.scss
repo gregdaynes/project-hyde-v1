@@ -3,3 +3,34 @@
 //  Headings
 //
 //
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.heading {
+  font-weight: bold;
+  @include font-display;
+  line-height: 1.2;
+  text-transform: uppercase;
+
+  a {
+    color: $color-grey--lightest;
+    padding-bottom: 2px;
+    text-decoration-color: $color-primary;
+
+    &:hover,
+    &:active {
+      text-decoration-color: currentColor;
+    }
+  }
+}
+
+h1 { @include h1; }
+h2 { @include h2; }
+h3 { @include h3; }
+h4 { @include h4; }
+h5 { @include h5; }
+h6 { @include body-large; }

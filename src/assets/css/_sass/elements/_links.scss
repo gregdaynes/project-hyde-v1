@@ -5,3 +5,18 @@
 //  Don't forget hover, active, and visited states
 //
 //
+
+a,
+.button--link {
+  color: $color-primary;
+  text-decoration: underline;
+  @include transition;
+
+  &:hover {
+    color: $color-primary--hover;
+  }
+
+  &:active {
+    color: $color-primary--active;
+  }
+}

@@ -1,0 +1,31 @@
+.site-header {
+  border-top: 2px solid $color-primary;
+}
+
+.site-header .container {
+  display: flex;
+  align-items: center;
+  @include wrapper-sizing;
+  @include margin-center;
+
+  > * {
+    flex-grow: 1;
+  }
+}
+
+.site-logo-link {
+  order: 1;
+}
+
+.site-logo {
+  background-image: url("/assets/images/logo.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  height: fs(xx-display);
+  @include margin-vertical($gutter--xl);
+
+  span {
+    @include image-replacement;
+  }
+}

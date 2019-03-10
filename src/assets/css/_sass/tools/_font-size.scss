@@ -69,33 +69,33 @@
 }
 
 @mixin h1 {
-  @include font-size(12);
+  font-size: fs(x-display);
 }
 
 @mixin h2 {
-  @include font-size(32);
+  font-size: fs(display);
 }
 
 @mixin h3 {
-  @include font-size(24);
+  font-size: fs(xxx-large);
 }
 
 @mixin h4 {
-  @include font-size(24);
+  font-size: fs(xx-large);
 }
 
 @mixin h5 {
-  @include font-size(16);
+  font-size: fs(x-large);
 }
 
 @mixin body-large {
-  @include font-size(16);
+  font-size: fs(large);
 }
 
 @mixin body {
-  @include font-size(16);
+  font-size: fs(normal);
 }
 
 @mixin small {
-  @include font-size(8);
+  font-size: fs(small);
 }

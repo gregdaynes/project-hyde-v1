@@ -1,0 +1,39 @@
+strong,
+em {
+  font-style: normal;
+  color: $color-text--muted;
+}
+
+blockquote {
+  border-left: 4px solid $color-secondary;
+  @include padding-left($gutter--large);
+
+  small {
+    font-size: fs(small);
+    color: $color-text--muted;
+  }
+}
+
+mark {
+  background-color: $color-secondary;
+}
+
+abbr,
+sub,
+cite,
+del,
+ins,
+dfn,
+sup,
+sub,
+i,
+b {
+  color: $color-text--muted;
+}
+
+hr {
+  border: $color-border;
+  background-color: $color-border;
+  height: 1px;
+  display: block;
+}

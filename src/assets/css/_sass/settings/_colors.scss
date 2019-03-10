@@ -23,18 +23,27 @@ $skyblue: (
   base: hsl(203, 92%, 75%)
 );
 
+$orange: (
+  base: hsl(11, 83%, 63%),
+  hover: hsl(11, 83%, 74%),
+  active: hsl(11, 85%, 82%),
+);
+
+$teal: (
+  base: hsl(177, 74%, 54%)
+);
+
 $greys: (
-    0: hsl(0, 0,    0),
-   10: hsl(0, 0,  10%),
-   20: hsl(0, 0,  20%),
-   30: hsl(0, 0,  30%),
-   40: hsl(0, 0,  40%),
-   50: hsl(0, 0,  50%),
-   60: hsl(0, 0,  60%),
-   70: hsl(0, 0,  70%),
-   80: hsl(0, 0,  80%),
-   90: hsl(0, 0,  90%),
-  100: hsl(0, 0, 100%),
+    0: hsl(0,   0%,    0%),
+   10: hsl(240, 5%,   16%),
+   20: hsl(240, 4%,   19%),
+   30: hsl(240, 6%,   22%),
+   40: hsl(240, 6%,   25%),
+   50: hsl(240, 8%,   77%),
+   60: hsl(240, 11%,  83%),
+   70: hsl(240, 25%,  91%),
+   80: hsl(240, 100%, 98%),
+  100: hsl(0,   0%,  100%),
 );
 
 $greys--alpha: (
@@ -51,7 +60,7 @@ $color-grey--light:    -color($greys,  70);
 $color-grey:           -color($greys,  50);
 $color-grey--dark:     -color($greys,  30);
 $color-grey--darker:   -color($greys,  20);
-$color-grey--darkest:  -color($greys,   0);
+$color-grey--darkest:  -color($greys,  10);
 
 $color-purple:        -color($purple);
 $color-purple--hover: -color($purple, hover);
@@ -59,16 +68,33 @@ $color-purple--hover: -color($purple, hover);
 $color-text:        -color($greys, 0);
 $color-text--light: -color($greys, 100);
 $color-text--dark:  -color($greys, 30);
+$color-text--muted: -color($greys, 50);
 
 $color-box-shadow:   -color($greys--alpha, 20);
 $color-text-shadow:  -color($greys--alpha, 50);
 $color-grey-overlay: -color($greys--alpha, 70);
 
-$color-primary:   -color($purple);
-$color-secondary: -color($skyblue);
+$color-primary:   -color($orange);
+$color-primary--hover: -color($orange, hover);
+$color-primary--active: -color($orange, active);
+
+$color-secondary: -color($teal);
 $color-tertiary:  -color($lemon);
 $color-accent:    -color($tomato);
-$color-base:      -color($greys, 80);
-$color-border:    -color($greys, 20);
+$color-base:      -color($greys, 20);
+$color-border:    -color($greys, 10);
+
+$color-button: $color-primary;
+$color-button--hover: $color-primary--hover;
+$color-button--active: $color-primary--active;
+$color-button--disabled: $color-grey--light;
+$color-button--transparent: transparentize($color-primary, 0.9);
+$color-button--transparent-hover: transparentize($color-primary--hover, 0.9);
+$color-button--transparent-active: transparentize($color-primary--active, 0.9);
+$color-button--transparent-disabled: transparentize($color-grey--light, 0.9);
+$color-button--secondary: $color-border;
+$color-button--secondary-hover: $color-grey--dark;
+$color-button--secondary-active: $color-grey;
+$color-button--transparent-secondary: transparentize($color-grey--dark, 0.9);
 
 // styleline-enable
