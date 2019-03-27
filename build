@@ -47,7 +47,7 @@ if [ "$1" = 'prod' ]; then
   echo "Building Site"
   echo "---"
   bundle exec jekyll build \
-  --config 'src/_config.yml,src/_config-common.yml,src/_config-production.yml' \
+  --config 'src/_config.yml,src/_config-production.yml' \
   --source src/ \
   --destination dist/
   echo '---'
@@ -62,7 +62,7 @@ trap 'echo "Development Server Killed"; kill %1; kill %2; kill %3' SIGINT SIGKIL
 bundle exec jekyll build \
   --drafts \
   --watch \
-  --config 'src/_config.yml,src/_config-common.yml,src/_config-development.yml' \
+  --config 'src/_config.yml,src/_config-development.yml' \
   --source src/ \
   --destination dist/ \
 & ./node_modules/.bin/babel src/ \
