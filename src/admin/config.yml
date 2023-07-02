@@ -1,7 +1,12 @@
 backend:
-  name: git-gateway
-  branch: master # Branch to update (optional; defaults to master)
+  name: github
+  repo: username/myreponame # github path to repo
+  site_domain: example.com # site name
+  branch: main # Branch to update (optional; defaults to master)
 
+local_backend: true
+
+publish_mode: editorial_workflow
 media_folder: "src/images/uploads" # Media files will be stored in the repo under images/uploads
 public_folder: "/images/uploads" # The src attribute for uploaded media will begin with /images/uploads
 
@@ -11,12 +16,43 @@ collections:
     folder: "src/_posts" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-    fields: # The fields for each document, usually in front matter
-      - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Body", name: "body", widget: "markdown"}
+    fields:
+      # The fields for each document, usually in front matter
+      - { label: "Layout", name: "layout", widget: "hidden", default: "post" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Body", name: "body", widget: "markdown" }
       - label: "Permalink"
         name: "permalink"
         widget: "text"
         required: false
+
+  - label: "Settings"
+    name: "settings"
+    editor:
+      preview: false
+    files:
+      - label: "Navigation"
+        name: "items"
+        file: "src/_data/site-nav.yml"
+        fields:
+          - label: Nav Items
+            name: items
+            widget: list
+            allow_add: true
+            collapsed: true
+            fields:
+              - { label: Title, name: text, widget: string }
+              - { label: URL, name: url, widget: string }
+              - { label: Class, name: class, widget: string, required: false }
+      - label: "Constants"
+        name: "constants"
+        file: "src/_data/constants.yaml"
+        fields:
+          - label: Entries
+            name: entries
+            widget: list
+            allow_add: true
+            fields:
+              - { label: Key, name: key, widget: string }
+              - { label: Value, name: value, widget: string }

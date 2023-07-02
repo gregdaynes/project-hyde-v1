@@ -57,9 +57,10 @@ fi
 echo ""
 echo "Running Development Server"
 echo "---"
-trap 'echo "Development Server Killed"; kill %1; kill %2; kill %3' SIGINT SIGKILL SIGQUIT
+trap 'echo "Development Server Killed"; kill %1; kill %2; kill %3; kill %4' SIGINT SIGKILL SIGQUIT
 
-bundle exec jekyll build \
+npx netlify-cms-proxy-server \
+& bundle exec jekyll build \
   --drafts \
   --watch \
   --config 'src/_config.yml,src/_config-development.yml' \
@@ -74,4 +75,4 @@ bundle exec jekyll build \
   --recursive src/assets/css/main.scss \
   --source-map-embed true \
   --output dist/assets/css/ \
-& npx browser-sync dist -w  -f ./dist
+& npx browser-sync dist -w  -f ./dist \
