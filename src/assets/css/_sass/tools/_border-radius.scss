@@ -33,11 +33,15 @@
 //
 // Example: button { @include border-radius(10px, top-left, bottom-right) }
 @mixin border-radius-size($size, $positions...) {
+  @if (-isvar($size)) {
+    $size: var($size);
+  }
+
   @if (length($positions) > 0) {
     @each $position in $positions {
-      border-#{$position}-radius: -size($size);
+      border-#{$position}-radius: $size;
     }
   } @else {
-    border-radius: -size($size);
+    border-radius: $size;
   }
 }

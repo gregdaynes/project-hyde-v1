@@ -9,7 +9,7 @@
 
 @mixin wrapper-sizing {
   width: 100%;
-  @include padding-horizontal($gutter--large);
+  @include padding-inline($gutter--large);
 
   @include screen($bp-tablet) {
     max-width: $bp-tablet;

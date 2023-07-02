@@ -6,6 +6,10 @@
 //
 //
 
+@mixin flex-row {
+  display: flex;
+}
+
 @mixin flex-column {
   display: flex;
   flex-direction: column;
@@ -109,7 +113,6 @@
   }
 }
 
-
 // when added to a parent flex element, force children to split the available space evenly
 //
 // $count: !required number of children
@@ -117,7 +120,11 @@
 // $justify-content: optional! standard flex for justifying children
 //
 // example header { display: flex; @include flex-children-even(10px, flex-end) }
-@mixin flex-children-even($count, $space-between: null, $justify-content: null) {
+@mixin flex-children-even(
+  $count,
+  $space-between: null,
+  $justify-content: null
+) {
   $basis: 100% / $count;
 
   @if ($space-between) {

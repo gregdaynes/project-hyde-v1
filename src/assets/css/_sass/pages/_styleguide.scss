@@ -24,7 +24,7 @@
     @include wrapper-sizing;
     @include flex-column-to-row($bp-desktop);
     @include border-solid(2px, $color-grey--lighter, bottom);
-    @include padding-vertical($gutter--xl);
+    @include padding-block($gutter--xl);
     display: flex;
 
     &__title {
@@ -43,7 +43,7 @@
     font-size: fs(xx-small);
     color: $color-grey--light;
     text-transform: uppercase;
-    @include margin-top($gutter);
+    @include margin-block-start($gutter);
   }
 
   .branding__content {
